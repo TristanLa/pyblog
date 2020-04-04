@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %} Posts {% endblock %}
+
+{% block content %}
+
+<div class="col-sm-9">
+    {% for i in posts %}
+    <div class="mb-4">
+        <h3><a href="{% url 'post-detail' i.pk %}">{{i.title}}</a></h3>
+        <small>Posted on {{i.create}}</small>
+        <hr>
+        <p class="text-muted">
+            {{i.text|linebreaks|safe|truncatewords:100}}
+            <a href="{% url 'post-detail' i.pk %}">Read more</a>
+            <a href="{% url 'post-list' i.category.slug %}" class="badge badge-info">
+                {{i.category.name|capfirst}}
+            </a>
+
+        </p>
+    </div>
+    {% empty %}
+    <div class="text-center">
+        <p class="display-1"> :'( </p>
+        <h3 class="mt-4">The category <span class="badge badge-info">{{category}}</span> does not exist !</h3>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="col-sm-3">
+    <h5>Categories</h5>
+    <ul class="list-unstyled">
+        {% for i in categories %}
+        <li><a href="{% url 'post-list' i.slug %}" class="badge badge-secondary">{{i.name|capfirst}}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+{% endblock content %}

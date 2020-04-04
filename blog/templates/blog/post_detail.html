@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap4 %}
+{% block title %} {{post.title}} {% endblock %}
+
+{% block content %}
+
+<div class="col-sm-9">
+    <div class="mt-3">
+        <h2>{{ post.title }}</h2>
+        <small>Posted on {{ post.create }}</small>
+        <hr>
+
+        <p class="text-muted">
+            {{ post.text|linebreaks|safe }}
+            <a href="{% url 'post-list' post.category.slug %}" class="badge badge-info">
+                {{post.category.name|capfirst}}
+            </a>
+        </p>
+    </div>
+
+    <div class="mt-3">
+        <h3>Comments</h3>
+        <ul class="list-unstyled">
+            {% for i in post_comments %}
+            <li class="media">
+                <img class="mr-3" src="{% static 'img/user.png' %}" width="45px" height="50px">
+                <div class="media-body">
+                    <h5 class="mt-0 mb-1">{{i.author_name}}</h5>
+                    <p>
+                        <small class="text-muted">{{i.created_at}}</small>
+                    </p>
+                    <p>
+                        {% if i.status == "moderated" %}
+                            <span class="font-weight-light font-italic text-muted">[[Moderated comment : {{i.moderation_text}} ]]</span>
+                        {% else %}
+                            {{i.text}}
+                        {% endif %}
+                    </p>
+                </div>
+                {% empty %}
+                <li class="media">There is no comment about this post yet.</li>
+                {% endfor %}
+            </li>
+        </ul>
+        <form action="{% url 'post-detail' post.pk %}" method="post" class="form">
+            {% csrf_token %}
+
+            {% bootstrap_form comment_form %}
+            {% buttons %}
+                <button type="submit" class="btn btn-primary">Publish comment</button>
+            {% endbuttons %}
+        </form>
+    </div>
+</div>
+
+<div class="col-sm-3">
+    <div class="mt-3">
+        <h5>Others posts from {{post.category}}</h5>
+        <ul class="list-group">
+            {% for i in similar_posts %}
+            <li class="list-group-item">
+                <a href="{% url 'post-detail' i.pk %}">{{ i.title|truncatewords:3 }}</a>
+            </li>
+            {% empty %}
+            This is the only post !
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock content %}
