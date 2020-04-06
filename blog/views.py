@@ -45,3 +45,10 @@ def post_detail(request, post_id, message=''):
         "message": message,
     }
     return render(request, "blog/post_detail.html", context)
+
+
+def about(request):
+    context = {
+        "navigation_items": navigation.navigation_items(navigation.NAV_ABOUT),
+    }
+    return render(request, "blog/about.html", context)
