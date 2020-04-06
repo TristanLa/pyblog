@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ec8df530-a983-4a08-8ca2-1ac3e707223d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="ec8df530-a983-4a08-8ca2-1ac3e707223d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,9 +52,25 @@
       <option name="presentableId" value="Default" />
       <updated>1585232517508</updated>
     </task>
+    <task id="LOCAL-00001" summary="Adding a message confirming that comments have been published">
+      <created>1586188062645</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586188062645</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Adding a message confirming that comments have been published" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding a message confirming that comments have been published" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="454" y="24" key="CommitChangelistDialog2" timestamp="1586188061250">
+      <screen x="0" y="0" width="1600" height="860" />
+    </state>
+    <state x="454" y="24" key="CommitChangelistDialog2/0.0.1600.860@0.0.1600.860" timestamp="1586188061250" />
     <state x="580" y="185" key="FileChooserDialogImpl" timestamp="1586006572948">
       <screen x="0" y="0" width="1600" height="860" />
     </state>
