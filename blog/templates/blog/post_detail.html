@@ -19,8 +19,17 @@
         </p>
     </div>
 
-    <div class="mt-3">
+    <div class="mt-3" id="comments">
         <h3>Comments</h3>
+            {% if message != '' %}
+            <div class="alert alert-success alert-dismissable fade show">
+                {{message}}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span>&times;</span>
+                </button>
+            </div>
+            {% endif %}
+
         <ul class="list-unstyled">
             {% for i in post_comments %}
             <li class="media">
@@ -45,7 +54,6 @@
         </ul>
         <form action="{% url 'post-detail' post.pk %}" method="post" class="form">
             {% csrf_token %}
-
             {% bootstrap_form comment_form %}
             {% buttons %}
                 <button type="submit" class="btn btn-primary">Publish comment</button>
