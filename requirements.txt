@@ -18,7 +18,7 @@ setuptools==46.1.3=py37_0
 soupsieve==2.0=py_0
 sqlite==3.31.1=he774522_0
 sqlparse==0.3.0=py_0
-vc=14.1==h0510ff6_4
+vc==14.1=h0510ff6_4
 vs2015_runtime==14.16.27012=hf0eaf9b_1
 wheel==0.34.2=py37_0
 whitenoise==4.1.4=py_0
