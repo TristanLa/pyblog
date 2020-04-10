@@ -1,7 +1,7 @@
 # This file may be used to create an environment using:
 # $ conda create --name <env> --file <this file>
 # platform: win-64
-asgiref=3.2.5=py_0
+asgiref==3.2.5=py_0
 beautifulsoup4=4.8.2=py37_0
 ca-certificates=2020.4.5.1=hecc5488_0
 certifi=2020.4.5.1=py37hc8dfbb8_0
