@@ -56,17 +56,18 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PC\Documents\GitHub\pyblog\static\img" />
-      <recent name="C:\Users\PC\PycharmProjects\pyblog" />
-      <recent name="C:\Users\PC\PycharmProjects\pyblog\pyblog\templates" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PC\Documents\GitHub\pyblog\pyblog" />
       <recent name="C:\Users\PC\Documents\GitHub\pyblog\static\img" />
       <recent name="C:\Users\PC\PycharmProjects\pyblog\static\img" />
       <recent name="C:\Users\PC\PycharmProjects\pyblog\blog\templates\blog" />
       <recent name="C:\Users\PC\PycharmProjects\pyblog\pyblog\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PC\Documents\GitHub\pyblog\pyblog" />
+      <recent name="C:\Users\PC\Documents\GitHub\pyblog\static\img" />
+      <recent name="C:\Users\PC\PycharmProjects\pyblog" />
+      <recent name="C:\Users\PC\PycharmProjects\pyblog\pyblog\templates" />
     </key>
   </component>
   <component name="SvnConfiguration">
